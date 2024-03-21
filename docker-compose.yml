@@ -7,14 +7,13 @@ services:
       BACKEND: "http://192.168.1.10:3000"
       PORT: "80"
       MODSEC_AUDIT_ENGINE: On
-      MODSEC_RULE_ENGINE: On
       BLOCKING_PARANOIA: 2
-      ERRORLOG: "/var/log/modsec_error.json"
-      ACCESSLOG: "/var/log/modsec_access.json"
-      MODSEC_AUDIT_LOG_FORMAT: JSON
+      ERRORLOG: "/var/log/modsec_error.log"
+      ACCESSLOG: "/var/log/modsec_access.log"
+      MODSEC_AUDIT_LOG_FORMAT: Native
       MODSEC_AUDIT_LOG_TYPE: Serial
       MODSEC_AUDIT_LOG_PARTS: ABDEFHIJZ
-      MODSEC_AUDIT_LOG: "/var/log/modsec_audit.json"
+      MODSEC_AUDIT_LOG: "/var/log/modsec_audit.log"
       MODSEC_TMP_DIR: "/tmp"
       MODSEC_RESP_BODY_ACCESS: "On"
       MODSEC_RESP_BODY_MIMETYPE: "text/plain text/html text/xml application/json"
